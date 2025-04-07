@@ -19,7 +19,10 @@ class UsersTableSeeder extends Seeder
         User::updateOrCreate(['nickname' => 'Lola'], [ // Actualizar o crear usuario
             'person_id' => $person->id,
             'email' => 'lherrerah@sena.edu.co',//Lohe9681
-        ]);
+        ]);    
+
+
+            
 
     }
 }
