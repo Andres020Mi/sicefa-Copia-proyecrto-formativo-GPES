@@ -17,6 +17,11 @@ class GPESController extends Controller
         return view('gpes::index');
     }
 
+    public function  welcome()
+    {
+        return view('gpes::welcome');
+    }
+   
     /**
      * Show the form for creating a new resource.
      * @return Renderable

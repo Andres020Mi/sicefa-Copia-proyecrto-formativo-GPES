@@ -4,6 +4,7 @@ namespace Modules\GPES\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class GPESDatabaseSeeder extends Seeder
 {
@@ -16,6 +17,17 @@ class GPESDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        DB::beginTransaction(); // Iniciar transacción
+
+        // Sección de lanzamiento para producción
+        $this->call(PeopleTableSeeder::class); // Ejecutar Seeder de personas
+        $this->call(AppTableSeeder::class); // Ejecutar Seeder de aplicación CAFETO
+        $this->call(UsersTableSeeder::class); // Ejecutar Seeder de usuarios
+        $this->call(RolesTableSeeder::class); // Ejecutar Seeder de roles para usuarios
+        $this->call(PermissionsTableSeeder::class); // Ejecutar Seeder de permisos para roles
+
+      
+        DB::commit(); // Finalizar transación
     }
+    
 }

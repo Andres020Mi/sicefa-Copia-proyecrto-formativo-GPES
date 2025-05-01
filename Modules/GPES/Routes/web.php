@@ -11,6 +11,8 @@
 |
 */
 
-Route::prefix('gpes')->group(function() {
-    Route::get('/', 'GPESController@index');
-});
+use Illuminate\Support\Facades\Route;
+use Modules\GPES\Http\Controllers\GPESController;
+
+Route::get('/GPES/welcome', [GPESController::class,"welcome"]);
+
