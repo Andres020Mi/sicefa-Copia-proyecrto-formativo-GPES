@@ -3,8 +3,8 @@
 namespace Modules\CAFETO\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Modules\SICA\Entities\App;
 use Modules\SICA\Entities\Permission;
+use Modules\SICA\Entities\App;
 use Modules\SICA\Entities\Role;
 
 class PermissionsTableSeeder extends Seeder

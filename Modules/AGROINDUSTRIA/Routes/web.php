@@ -1,6 +1,7 @@
 <?php
 
 //instructor
+
 use Modules\AGROINDUSTRIA\Http\Controllers\Instructor\FormulationController;
 use Modules\AGROINDUSTRIA\Http\Controllers\Instructor\UnitController;
 use Modules\AGROINDUSTRIA\Http\Controllers\Instructor\LaborController;

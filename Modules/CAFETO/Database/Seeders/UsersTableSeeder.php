@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
         $person = Person::where('document_number', 52829681)->first(); // Consultar Persona
         User::updateOrCreate(['nickname' => 'LFHerre'], [ // Actualizar o crear usuario
             'person_id' => $person->id,
-            'email' => 'lolafernandaherrera@gmail.com'
+            'email' => 'lolafernandaherrera@gmail.com'  //Lofe
         ]);
 
         // Registrar o actualizar usuario para Manuel Steven Ossa Lievano

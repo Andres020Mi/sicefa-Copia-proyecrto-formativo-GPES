@@ -15,6 +15,7 @@ class GPESController extends Controller
     public function index()
     {
         return view('gpes::index');
+        return view('gpes::index');
     }
 
     public function  welcome()
